@@ -14,7 +14,10 @@ export const routes: Routes = [
   {
     path: 'about',
     component: AboutComponent,
-    title: 'Про компанію'
+    title: 'Про компанію',
+    data: {
+      description: 'Дізнайтесь більше про нашу юридичну фірму Деменкова і партнери, її досвід та експертність у праві.'
+    }
   },
   {
     path: 'practice',
@@ -29,7 +32,10 @@ export const routes: Routes = [
   {
     path: 'contact',
     component: ContactComponent,
-    title: 'Контакти'
+    title: 'Контакти',
+    data: {
+      description: 'Контактна інформація: адреса, телефон, email нашої юридичної компанії Деменкова і Партнери.'
+    }
   },
   { path: '**',
     component: NotFoundComponent,

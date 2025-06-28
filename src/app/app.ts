@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { RouterOutlet, Router, NavigationEnd, ActivatedRoute } from '@angular/router';
+import { Title, Meta } from '@angular/platform-browser';
+import { filter, map, mergeMap } from 'rxjs';
 import {HeaderComponent} from './shared/header/header.component';
 import {FooterComponent} from './shared/footer/footer.component';
 
@@ -11,5 +13,33 @@ import {FooterComponent} from './shared/footer/footer.component';
   styleUrl: './app.scss'
 })
 export class App {
-  protected title = 'dap';
+  private router = inject(Router);
+  private activatedRoute = inject(ActivatedRoute);
+  private title = inject(Title);
+  private meta = inject(Meta);
+
+  constructor() {
+    this.router.events
+      .pipe(
+        filter(event => event instanceof NavigationEnd),
+        map(() => {
+          let route = this.activatedRoute;
+          while (route.firstChild) route = route.firstChild;
+          return route;
+        }),
+        mergeMap(route => route.data)
+      )
+      .subscribe(data => {
+        if (data['title']) {
+          this.title.setTitle(data['title']);
+        }
+
+        if (data['description']) {
+          this.meta.updateTag({
+            name: 'description',
+            content: data['description']
+          });
+        }
+      });
+  }
 }
