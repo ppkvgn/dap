@@ -4,6 +4,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { PracticeComponent } from './pages/practice/practice.component.';
 import { TeamComponent } from './pages/team/team.component.';
 import { ContactComponent } from './pages/contact/contact.component.';
+import {NotFoundComponent} from './pages/not-found/not-found.component';
 export const routes: Routes = [
   {
     path: '',
@@ -30,6 +31,9 @@ export const routes: Routes = [
     component: ContactComponent,
     title: 'Контакти'
   },
+  { path: '**',
+    component: NotFoundComponent,
+    title: 'Сторінку не знайдено' },
   {
     path: '**',
     redirectTo: ''
