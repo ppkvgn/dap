@@ -3,10 +3,13 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "tailwind:watch": "tailwindcss -i src/styles.scss -o src/tailwind.css --watch",
+    "start": "npm run tailwind:build && ng serve",
+    "tailwind:build": "tailwindcss -i src/styles.scss -o src/tailwind.css",
+    "build": "npm run tailwind:build && ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "dev": "concurrently \"npm run tailwind:watch\" \"ng serve\""
   },
   "private": true,
   "dependencies": {
@@ -25,12 +28,17 @@
     "@angular/cli": "^20.0.2",
     "@angular/compiler-cli": "^20.0.0",
     "@types/jasmine": "~5.1.0",
+    "autoprefixer": "^10.4.21",
+    "concurrently": "^8.2.2",
     "jasmine-core": "~5.7.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "postcss": "^8.5.6",
+    "sass": "^1.89.2",
+    "tailwindcss": "^3.3.5",
     "typescript": "~5.8.2"
   }
 }
