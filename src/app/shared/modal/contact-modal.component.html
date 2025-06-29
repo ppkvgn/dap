@@ -13,7 +13,14 @@
       <input type="text" placeholder="Ваше ім'я" class="w-full border border-gray-300 rounded px-3 py-2" />
       <input type="email" placeholder="Ваш email" class="w-full border border-gray-300 rounded px-3 py-2" />
       <textarea placeholder="Повідомлення" class="w-full border border-gray-300 rounded px-3 py-2 h-24"></textarea>
-      <button type="submit" class="w-full bg-indigo-600 text-white py-2 px-4 rounded hover:bg-indigo-700 transition">
+
+      <!-- Checkbox for agreement -->
+      <div class="flex items-start gap-2">
+        <input type="checkbox" id="agreement" [(ngModel)]="agreementChecked" name="agreement" class="mt-1" />
+        <label for="agreement" class="text-sm text-gray-700">Відправляючи цю форму я підтверджую, що ознайомився(лась) з умовами договору оферти.</label>
+      </div>
+
+      <button type="submit" [disabled]="!agreementChecked" class="w-full bg-indigo-600 text-white py-2 px-4 rounded hover:bg-indigo-700 transition disabled:bg-gray-400 disabled:cursor-not-allowed">
         Надіслати
       </button>
     </form>
