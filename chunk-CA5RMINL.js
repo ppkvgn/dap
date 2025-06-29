@@ -1,1 +1,0 @@
-import{Ea as t,Ua as o,Va as i,cb as a}from"./chunk-XR77XUWD.js";var s=["class","component"],c=class n{static \u0275fac=function(e){return new(e||n)};static \u0275cmp=t({type:n,selectors:[["app-criminal",8,"component"]],attrs:s,decls:2,vars:0,template:function(e,p){e&1&&(o(0,"p"),a(1,"criminal.component works!"),i())},encapsulation:2})};export{c as CriminalComponent};
