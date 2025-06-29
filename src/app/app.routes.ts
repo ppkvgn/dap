@@ -4,7 +4,8 @@ import { AboutComponent } from './pages/about/about.component';
 import { ServicesComponent } from './pages/services/services.component';
 import { TeamComponent } from './pages/team/team.component';
 import { ContactComponent } from './pages/contact/contact.component';
-import {NotFoundComponent} from './pages/not-found/not-found.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
+
 export const routes: Routes = [
   {
     path: '',
@@ -27,7 +28,69 @@ export const routes: Routes = [
   {
     path: 'services/legal',
     loadComponent: () => import('./pages/services/legal/legal.component').then(m => m.LegalComponent),
-    title: 'Юридичні послуги'
+    title: 'Юридичні послуги',
+    children: [
+      {
+        path: 'family',
+        loadComponent: () =>
+          import('./pages/services/legal/cases/family/family.component').then(m => m.FamilyComponent),
+        title: 'Сімейне право'
+      },
+      {
+        path: 'family/alimony',
+        loadComponent: () =>
+          import('./pages/services/legal/cases/family/alimony/alimony.component').then(m => m.AlimonyComponent),
+        title: 'Аліменти'
+      },
+      {
+        path: 'family/divorce',
+        loadComponent: () =>
+          import('./pages/services/legal/cases/family/divorce/divorce.component').then(m => m.DivorceComponent),
+        title: 'Розлучення'
+      },
+      {
+        path: 'family/property-division',
+        loadComponent: () =>
+          import('./pages/services/legal/cases/family/property-division/property-division.component').then(m => m.PropertyDivisionComponent),
+        title: 'Поділ майна'
+      },
+      {
+        path: 'family/child-residence',
+        loadComponent: () =>
+          import('./pages/services/legal/cases/family/child-residence/child-residence.component').then(m => m.ChildResidenceComponent),
+        title: 'Місце проживання дитини'
+      },
+      {
+        path: 'family/parental-rights-termination',
+        loadComponent: () =>
+          import('./pages/services/legal/cases/family/parental-rights-termination/parental-rights-termination.component').then(m => m.ParentalRightsTerminationComponent),
+        title: 'Позбавлення батьківських прав'
+      },
+
+      {
+        path: 'civil',
+        loadComponent: () =>
+          import('./pages/services/legal/cases/civil/civil.component').then(m => m.CivilComponent),
+        title: 'Цивільне право'
+      },
+      {
+        path: 'tax',
+        loadComponent: () =>
+          import('./pages/services/legal/cases/tax/tax.component').then(m => m.TaxComponent),
+        title: 'Податкове право'
+      },
+      {
+        path: 'criminal',
+        loadComponent: () =>
+          import('./pages/services/legal/cases/criminal/criminal.component').then(m => m.CriminalComponent),
+        title: 'Кримінальне право'
+      },
+      {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'family'  // Default branch if none selected
+      }
+    ]
   },
   {
     path: 'services/valuation',
@@ -57,7 +120,9 @@ export const routes: Routes = [
       description: 'Контактна інформація: адреса, телефон, email нашої юридичної компанії Деменкова і Партнери.'
     }
   },
-  { path: '**',
+  {
+    path: '**',
     component: NotFoundComponent,
-    title: 'Сторінку не знайдено' }
+    title: 'Сторінку не знайдено'
+  }
 ];

@@ -1,12 +1,33 @@
-<section class="py-16 px-4 bg-white text-gray-900">
-  <div class="max-w-4xl mx-auto">
-    <h1 class="text-3xl md:text-5xl font-bold mb-6">Юридичні послуги</h1>
-    <p class="text-lg mb-6">Ми надаємо правовий супровід фізичним та юридичним особам у різних сферах права.</p>
-    <ul class="list-disc list-inside space-y-2 text-gray-700">
-      <li>Розробка та аналіз договорів</li>
-      <li>Судовий захист інтересів</li>
-      <li>Юридичний супровід бізнесу</li>
-      <li>Вирішення трудових, податкових, адміністративних спорів</li>
+<section class="px-4 py-12 max-w-6xl mx-auto grid md:grid-cols-4 gap-6 text-gray-900">
+  <!-- Sidebar -->
+  <aside class="col-span-1">
+    <h2 class="text-xl font-bold mb-4">Галузі права</h2>
+    <ul class="space-y-2">
+      <li>
+        <a routerLink="family" routerLinkActive="font-semibold text-blue-700" class="hover:underline block">
+          Сімейне право
+        </a>
+      </li>
+      <li>
+        <a routerLink="civil" routerLinkActive="font-semibold text-blue-700" class="hover:underline block">
+          Цивільне право
+        </a>
+      </li>
+      <li>
+        <a routerLink="tax" routerLinkActive="font-semibold text-blue-700" class="hover:underline block">
+          Податкове право
+        </a>
+      </li>
+      <li>
+        <a routerLink="criminal" routerLinkActive="font-semibold text-blue-700" class="hover:underline block">
+          Кримінальне право
+        </a>
+      </li>
     </ul>
-  </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="col-span-3 min-h-[300px]">
+    <router-outlet></router-outlet>
+  </main>
 </section>
