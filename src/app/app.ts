@@ -4,6 +4,7 @@ import { Title, Meta } from '@angular/platform-browser';
 import { filter, map, mergeMap } from 'rxjs';
 import {HeaderComponent} from './shared/header/header.component';
 import {FooterComponent} from './shared/footer/footer.component';
+import {AnalyticsService} from './core/services/analytics.service';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +19,9 @@ export class App {
   private title = inject(Title);
   private meta = inject(Meta);
 
-  constructor() {
+  constructor(
+    private analytics: AnalyticsService
+  ) {
     this.router.events
       .pipe(
         filter(event => event instanceof NavigationEnd),
