@@ -2,9 +2,9 @@ import { Component, inject } from '@angular/core';
 import { RouterOutlet, Router, NavigationEnd, ActivatedRoute } from '@angular/router';
 import { Title, Meta } from '@angular/platform-browser';
 import { filter, map, mergeMap } from 'rxjs';
-import {HeaderComponent} from './shared/header/header.component';
-import {FooterComponent} from './shared/footer/footer.component';
-import {AnalyticsService} from './core/services/analytics.service';
+import { HeaderComponent } from './shared/header/header.component';
+import { FooterComponent } from './shared/footer/footer.component';
+import { GtmService } from './core/services/gtm.service';
 
 @Component({
   selector: 'app-root',
@@ -18,10 +18,9 @@ export class App {
   private activatedRoute = inject(ActivatedRoute);
   private title = inject(Title);
   private meta = inject(Meta);
+  private gtm = inject(GtmService);
 
-  constructor(
-    private analytics: AnalyticsService
-  ) {
+  constructor() {
     this.router.events
       .pipe(
         filter(event => event instanceof NavigationEnd),
@@ -43,6 +42,12 @@ export class App {
             content: data['description']
           });
         }
+
+        // 🔥 надсилаємо подію до GTM
+        this.gtm.pushEvent('pageview', {
+        page_title: data['title'] || '',
+        page_path: this.router.url
+        });
       });
   }
 }
