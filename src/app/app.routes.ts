@@ -1,10 +1,26 @@
 import { Routes } from '@angular/router';
+
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ServicesComponent } from './pages/services/services.component';
 import { TeamComponent } from './pages/team/team.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+
+// 🔹 Юридичні галузі
+import { familyRoutes } from './pages/services/legal/cases/family/family.routes';
+import { militaryRoutes } from './pages/services/legal/cases/military/military.routes';
+import { civilRoutes } from './pages/services/legal/cases/civil/civil.routes';
+import { administrativeRoutes } from './pages/services/legal/cases/administrative/administrative.routes';
+import { criminalRoutes } from './pages/services/legal/cases/criminal/criminal.routes';
+import { taxRoutes } from './pages/services/legal/cases/tax/tax.routes';
+import { laborRoutes } from './pages/services/legal/cases/labor/labor.routes';
+import { landRoutes } from './pages/services/legal/cases/land/land.routes';
+import { housingRoutes } from './pages/services/legal/cases/housing/housing.routes';
+import { corporateRoutes } from './pages/services/legal/cases/corporate/corporate.routes';
+import { intellectualRoutes } from './pages/services/legal/cases/intellectual/intellectual.routes';
+import {customsRoutes} from './pages/services/legal/cases/customs/customs.routes';
+import {commercialRoutes} from './pages/services/legal/cases/commercial/commercial.routes';
 
 export const routes: Routes = [
   {
@@ -17,7 +33,7 @@ export const routes: Routes = [
     component: AboutComponent,
     title: 'Про компанію',
     data: {
-      description: 'Дізнайтесь більше про нашу юридичну фірму Деменкова і партнери, її досвід та експертність у праві.'
+      description: 'Дізнайтесь більше про нашу юридичну фірму Деменкова і Партнери, її досвід та експертність у праві.'
     }
   },
   {
@@ -30,65 +46,23 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/services/legal/legal.component').then(m => m.LegalComponent),
     title: 'Юридичні послуги',
     children: [
-      {
-        path: 'family',
-        loadComponent: () =>
-          import('./pages/services/legal/cases/family/family.component').then(m => m.FamilyComponent),
-        title: 'Сімейне право'
-      },
-      {
-        path: 'family/alimony',
-        loadComponent: () =>
-          import('./pages/services/legal/cases/family/alimony/alimony.component').then(m => m.AlimonyComponent),
-        title: 'Аліменти'
-      },
-      {
-        path: 'family/divorce',
-        loadComponent: () =>
-          import('./pages/services/legal/cases/family/divorce/divorce.component').then(m => m.DivorceComponent),
-        title: 'Розлучення'
-      },
-      {
-        path: 'family/property-division',
-        loadComponent: () =>
-          import('./pages/services/legal/cases/family/property-division/property-division.component').then(m => m.PropertyDivisionComponent),
-        title: 'Поділ майна'
-      },
-      {
-        path: 'family/child-residence',
-        loadComponent: () =>
-          import('./pages/services/legal/cases/family/child-residence/child-residence.component').then(m => m.ChildResidenceComponent),
-        title: 'Місце проживання дитини'
-      },
-      {
-        path: 'family/parental-rights-termination',
-        loadComponent: () =>
-          import('./pages/services/legal/cases/family/parental-rights-termination/parental-rights-termination.component').then(m => m.ParentalRightsTerminationComponent),
-        title: 'Позбавлення батьківських прав'
-      },
-
-      {
-        path: 'civil',
-        loadComponent: () =>
-          import('./pages/services/legal/cases/civil/civil.component').then(m => m.CivilComponent),
-        title: 'Цивільне право'
-      },
-      {
-        path: 'tax',
-        loadComponent: () =>
-          import('./pages/services/legal/cases/tax/tax.component').then(m => m.TaxComponent),
-        title: 'Податкове право'
-      },
-      {
-        path: 'criminal',
-        loadComponent: () =>
-          import('./pages/services/legal/cases/criminal/criminal.component').then(m => m.CriminalComponent),
-        title: 'Кримінальне право'
-      },
+      ...familyRoutes,
+      ...militaryRoutes,
+      ...civilRoutes,
+      ...commercialRoutes,
+      ...customsRoutes,
+      ...administrativeRoutes,
+      ...criminalRoutes,
+      ...taxRoutes,
+      ...laborRoutes,
+      ...landRoutes,
+      ...housingRoutes,
+      ...corporateRoutes,
+      ...intellectualRoutes,
       {
         path: '',
         pathMatch: 'full',
-        redirectTo: 'family'  // Default branch if none selected
+        redirectTo: 'family'
       }
     ]
   },
