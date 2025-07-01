@@ -1,0 +1,1 @@
+import{Ea as n,Ya as l,Za as a,ib as o}from"./chunk-T7RXT44I.js";var c=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=n({type:t,selectors:[["app-intellectual"]],decls:2,vars:0,template:function(e,s){e&1&&(l(0,"p"),o(1,"intellectual works!"),a())},encapsulation:2})};export{c as IntellectualComponent};

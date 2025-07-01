@@ -1,1 +1,0 @@
-import{Ea as t,Ua as n,Va as r,eb as a}from"./chunk-XF4LF5XN.js";var p=class o{static \u0275fac=function(e){return new(e||o)};static \u0275cmp=t({type:o,selectors:[["app-corporate"]],decls:2,vars:0,template:function(e,c){e&1&&(n(0,"p"),a(1,"corporate works!"),r())},encapsulation:2})};export{p as CorporateComponent};
