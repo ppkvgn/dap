@@ -1,0 +1,1 @@
+import{Ea as o,Ua as t,Va as s,eb as i}from"./chunk-XF4LF5XN.js";var a=class n{static \u0275fac=function(e){return new(e||n)};static \u0275cmp=o({type:n,selectors:[["app-housing"]],decls:2,vars:0,template:function(e,c){e&1&&(t(0,"p"),i(1,"housing works!"),s())},encapsulation:2})};export{a as HousingComponent};

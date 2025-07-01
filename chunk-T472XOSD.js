@@ -1,0 +1,1 @@
+import{Ea as t,Ua as n,Va as a,eb as s}from"./chunk-XF4LF5XN.js";var r=class o{static \u0275fac=function(e){return new(e||o)};static \u0275cmp=t({type:o,selectors:[["app-labor"]],decls:2,vars:0,template:function(e,i){e&1&&(n(0,"p"),s(1,"labor works!"),a())},encapsulation:2})};export{r as LaborComponent};

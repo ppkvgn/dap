@@ -1,0 +1,1 @@
+import{Ea as s,Ua as o,Va as n,eb as m}from"./chunk-XF4LF5XN.js";var a=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=s({type:t,selectors:[["app-customs"]],decls:2,vars:0,template:function(e,p){e&1&&(o(0,"p"),m(1,"customs works!"),n())},encapsulation:2})};export{a as CustomsComponent};

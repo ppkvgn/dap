@@ -1,0 +1,1 @@
+import{Ea as t,Ua as n,Va as c,eb as m}from"./chunk-XF4LF5XN.js";var i=["class","component"],a=class o{static \u0275fac=function(e){return new(e||o)};static \u0275cmp=t({type:o,selectors:[["app-commercial",8,"component"]],attrs:i,decls:2,vars:0,template:function(e,p){e&1&&(n(0,"p"),m(1,"commercial.component works!"),c())},encapsulation:2})};export{a as CommercialComponent};
