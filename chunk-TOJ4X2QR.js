@@ -1,0 +1,1 @@
+import{Ea as o,Ya as p,Za as c,ib as n}from"./chunk-T7RXT44I.js";var r=["class","component"],s=class e{static \u0275fac=function(t){return new(t||e)};static \u0275cmp=o({type:e,selectors:[["app-tcc-support",8,"component"]],attrs:r,decls:2,vars:0,template:function(t,i){t&1&&(p(0,"p"),n(1,"tcc-support.component works!"),c())},encapsulation:2})};export{s as TccSupportComponent};
