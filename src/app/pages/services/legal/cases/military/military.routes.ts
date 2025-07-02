@@ -8,27 +8,45 @@ export const militaryRoutes: Routes = [
     title: 'Військове право'
   },
   {
-    path: 'military/mobilization-appeal',
+    path: 'military/vlk-appeal',
     loadComponent: () =>
-      import('./mobilization-appeal/mobilization-appeal.component').then(m => m.MobilizationAppealComponent),
-    title: 'Оскарження мобілізації'
+      import('./vlk-appeal/vlk-appeal.component').then(m => m.VlkAppealComponent),
+    title: 'Оскарження ВЛК'
   },
   {
-    path: 'military/military-service-rights',
+    path: 'military/mobilization-deferment',
     loadComponent: () =>
-      import('./military-service-rights/military-service-rights.component').then(m => m.MilitaryServiceRightsComponent),
-    title: 'Захист прав військовослужбовців'
+      import('./mobilization-deferment/mobilization-deferment.component').then(m => m.MobilizationDefermentComponent),
+    title: 'Відстрочка від мобілізації'
   },
   {
-    path: 'military/war-injury-compensation',
+    path: 'military/financial-support',
     loadComponent: () =>
-      import('./war-injury-compensation/war-injury-compensation.component').then(m => m.WarInjuryCompensationComponent),
-    title: 'Виплати за поранення або загибель'
+      import('./financial-support/financial-support.component').then(m => m.FinancialSupportComponent),
+    title: 'Грошове забезпечення'
   },
   {
-    path: 'military/military-documents',
+    path: 'military/tcc-support',
     loadComponent: () =>
-      import('./military-documents/military-documents.component').then(m => m.MilitaryDocumentsComponent),
-    title: 'Підготовка військових документів'
+      import('./tcc-support/tcc-support.component').then(m => m.TccSupportComponent),
+    title: 'Супровід у ТЦК'
+  },
+  {
+    path: 'military/dismissal-zsu',
+    loadComponent: () =>
+      import('./dismissal-zsu/dismissal-zsu.component').then(m => m.DismissalZsuComponent),
+    title: 'Звільнення з лав ЗСУ'
+  },
+  {
+    path: 'military/ubd-status',
+    loadComponent: () =>
+      import('./ubd-status/ubd-status.component').then(m => m.UbdStatusComponent),
+    title: 'Отримання статусу УБД'
+  },
+  {
+    path: 'military/unit-transfer',
+    loadComponent: () =>
+      import('./unit-transfer/unit-transfer.component').then(m => m.UnitTransferComponent),
+    title: 'Переведення в іншу частину'
   }
 ];

@@ -590,11 +590,6 @@ video {
   grid-column: span 3 / span 3;
 }
 
-.mx-4 {
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -634,6 +629,10 @@ video {
 
 .mb-8 {
   margin-bottom: 2rem;
+}
+
+.ml-6 {
+  margin-left: 1.5rem;
 }
 
 .mt-1 {
@@ -1249,10 +1248,6 @@ video {
   .md\:mx-auto {
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .md\:ml-6 {
-    margin-left: 1.5rem;
   }
 
   .md\:block {
