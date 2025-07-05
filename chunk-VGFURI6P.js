@@ -1,0 +1,1 @@
+import{Fa as p,Za as n,_a as a,jb as o}from"./chunk-BVXZNPQK.js";var c=["class","component"],l=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=p({type:t,selectors:[["app-vlk-appeal",8,"component"]],attrs:c,decls:2,vars:0,template:function(e,i){e&1&&(n(0,"p"),o(1,"vlk-appeal.component works!"),a())},encapsulation:2})};export{l as VlkAppealComponent};

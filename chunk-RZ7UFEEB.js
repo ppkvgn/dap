@@ -1,0 +1,1 @@
+import{Fa as n,Za as s,_a as o,jb as a}from"./chunk-BVXZNPQK.js";var p=["class","component"],c=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=n({type:t,selectors:[["app-case-list",8,"component"]],attrs:p,decls:2,vars:0,template:function(e,m){e&1&&(s(0,"p"),a(1,"case-list.component works!"),o())},encapsulation:2})};export{c as CaseListComponent};

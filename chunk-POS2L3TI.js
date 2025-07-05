@@ -1,1 +1,0 @@
-import{Ea as s,Ya as n,Za as o,ib as a}from"./chunk-T7RXT44I.js";var i=["class","component"],p=class e{static \u0275fac=function(t){return new(t||e)};static \u0275cmp=s({type:e,selectors:[["app-ubd-status",8,"component"]],attrs:i,decls:2,vars:0,template:function(t,m){t&1&&(n(0,"p"),a(1,"ubd-status.component works!"),o())},encapsulation:2})};export{p as UbdStatusComponent};

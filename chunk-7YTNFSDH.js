@@ -1,1 +1,0 @@
-import{Ea as t,Ya as a,Za as o,ib as s}from"./chunk-T7RXT44I.js";var p=class n{static \u0275fac=function(e){return new(e||n)};static \u0275cmp=t({type:n,selectors:[["app-land"]],decls:2,vars:0,template:function(e,l){e&1&&(a(0,"p"),s(1,"land works!"),o())},encapsulation:2})};export{p as LandComponent};

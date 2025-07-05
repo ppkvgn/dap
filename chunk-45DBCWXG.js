@@ -1,0 +1,1 @@
+import{Fa as t,Za as n,_a as o,jb as s}from"./chunk-BVXZNPQK.js";var c=class i{static \u0275fac=function(e){return new(e||i)};static \u0275cmp=t({type:i,selectors:[["app-civil"]],decls:2,vars:0,template:function(e,p){e&1&&(n(0,"p"),s(1,"civil works!"),o())},encapsulation:2})};export{c as CivilComponent};

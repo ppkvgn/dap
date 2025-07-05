@@ -1,0 +1,1 @@
+import{Fa as n,Za as o,_a as a,jb as s}from"./chunk-BVXZNPQK.js";var i=["class","component"],p=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=n({type:t,selectors:[["app-tax",8,"component"]],attrs:i,decls:2,vars:0,template:function(e,m){e&1&&(o(0,"p"),s(1,"tax.component works!"),a())},encapsulation:2})};export{p as TaxComponent};

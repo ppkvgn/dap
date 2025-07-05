@@ -1,0 +1,1 @@
+import{Fa as t,Za as n,_a as p,jb as r}from"./chunk-BVXZNPQK.js";var a=class o{static \u0275fac=function(e){return new(e||o)};static \u0275cmp=t({type:o,selectors:[["app-corporate"]],decls:2,vars:0,template:function(e,c){e&1&&(n(0,"p"),r(1,"corporate works!"),p())},encapsulation:2})};export{a as CorporateComponent};
