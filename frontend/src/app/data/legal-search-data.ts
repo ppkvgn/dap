@@ -1,4 +1,3 @@
-// src/app/data/legal-search-data.ts
 export const legalSearchData = [
   {
     title: 'Аліменти',
@@ -30,5 +29,4 @@ export const legalSearchData = [
     keywords: ['влк', 'повістка', 'військкомат', 'мобілізація'],
     description: 'Юридичний супровід скасування незаконної мобілізації.'
   },
-  // ➕ Додай інші сторінки...
 ];

@@ -12,7 +12,6 @@ export class ContactComponent {
   ngOnInit(): void {
   }
 
-  // You can add form handling logic here
   onSubmit(form: any): void {
     console.log('Form submitted', form);
     // Add your form submission logic here

@@ -7,7 +7,6 @@ import { TeamComponent } from './public/pages/team/team.component';
 import { ContactComponent } from './public/pages/contact/contact.component';
 import { NotFoundComponent } from './public/pages/not-found/not-found.component';
 
-// 🔹 Юридичні галузі
 import { familyRoutes } from './public/pages/services/legal/cases/family/family.routes';
 import { militaryRoutes } from './public/pages/services/legal/cases/military/military.routes';
 import { civilRoutes } from './public/pages/services/legal/cases/civil/civil.routes';

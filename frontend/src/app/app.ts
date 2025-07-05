@@ -43,7 +43,6 @@ export class App {
           });
         }
 
-        // 🔥 надсилаємо подію до GTM
         this.gtm.pushEvent('pageview', {
         page_title: data['title'] || '',
         page_path: this.router.url
