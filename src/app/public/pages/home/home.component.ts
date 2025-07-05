@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {ContactModalComponent} from '../../shared/modal/contact-modal.component';
+import {ContactModalComponent} from '../../../shared/modal/contact-modal.component';
 
 @Component({
   selector: 'app-home',

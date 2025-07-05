@@ -25,6 +25,13 @@
       <a routerLink="/team" class="text-gray-700 hover:text-indigo-600">Команда</a>
       <a routerLink="/contact" class="text-gray-700 hover:text-indigo-600">Контакти</a>
       <app-search-box class="ml-6"></app-search-box>
+      <button (click)="showLogin = true" class="text-gray-700 hover:text-indigo-600 flex items-center gap-1">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M5.121 17.804A10.97 10.97 0 0112 15c2.485 0 4.779.808 6.879 2.17M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg>
+        <span class="hidden lg:inline">Увійти</span>
+      </button>
     </nav>
   </div>
 
@@ -34,5 +41,8 @@
     <a routerLink="/services" class="block text-gray-700 hover:text-indigo-600">Послуги</a>
     <a routerLink="/team" class="block text-gray-700 hover:text-indigo-600">Команда</a>
     <a routerLink="/contact" class="block text-gray-700 hover:text-indigo-600">Контакти</a>
+    <a (click)="showLogin = true" class="block text-gray-700 hover:text-indigo-600 cursor-pointer">Увійти</a>
   </div>
 </header>
+
+<app-login-modal *ngIf="showLogin" (close)="showLogin = false"></app-login-modal>

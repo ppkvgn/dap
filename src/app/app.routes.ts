@@ -1,26 +1,26 @@
 import { Routes } from '@angular/router';
 
-import { HomeComponent } from './pages/home/home.component';
-import { AboutComponent } from './pages/about/about.component';
-import { ServicesComponent } from './pages/services/services.component';
-import { TeamComponent } from './pages/team/team.component';
-import { ContactComponent } from './pages/contact/contact.component';
-import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { HomeComponent } from './public/pages/home/home.component';
+import { AboutComponent } from './public/pages/about/about.component';
+import { ServicesComponent } from './public/pages/services/services.component';
+import { TeamComponent } from './public/pages/team/team.component';
+import { ContactComponent } from './public/pages/contact/contact.component';
+import { NotFoundComponent } from './public/pages/not-found/not-found.component';
 
 // 🔹 Юридичні галузі
-import { familyRoutes } from './pages/services/legal/cases/family/family.routes';
-import { militaryRoutes } from './pages/services/legal/cases/military/military.routes';
-import { civilRoutes } from './pages/services/legal/cases/civil/civil.routes';
-import { administrativeRoutes } from './pages/services/legal/cases/administrative/administrative.routes';
-import { criminalRoutes } from './pages/services/legal/cases/criminal/criminal.routes';
-import { taxRoutes } from './pages/services/legal/cases/tax/tax.routes';
-import { laborRoutes } from './pages/services/legal/cases/labor/labor.routes';
-import { landRoutes } from './pages/services/legal/cases/land/land.routes';
-import { housingRoutes } from './pages/services/legal/cases/housing/housing.routes';
-import { corporateRoutes } from './pages/services/legal/cases/corporate/corporate.routes';
-import { intellectualRoutes } from './pages/services/legal/cases/intellectual/intellectual.routes';
-import {customsRoutes} from './pages/services/legal/cases/customs/customs.routes';
-import {commercialRoutes} from './pages/services/legal/cases/commercial/commercial.routes';
+import { familyRoutes } from './public/pages/services/legal/cases/family/family.routes';
+import { militaryRoutes } from './public/pages/services/legal/cases/military/military.routes';
+import { civilRoutes } from './public/pages/services/legal/cases/civil/civil.routes';
+import { administrativeRoutes } from './public/pages/services/legal/cases/administrative/administrative.routes';
+import { criminalRoutes } from './public/pages/services/legal/cases/criminal/criminal.routes';
+import { taxRoutes } from './public/pages/services/legal/cases/tax/tax.routes';
+import { laborRoutes } from './public/pages/services/legal/cases/labor/labor.routes';
+import { landRoutes } from './public/pages/services/legal/cases/land/land.routes';
+import { housingRoutes } from './public/pages/services/legal/cases/housing/housing.routes';
+import { corporateRoutes } from './public/pages/services/legal/cases/corporate/corporate.routes';
+import { intellectualRoutes } from './public/pages/services/legal/cases/intellectual/intellectual.routes';
+import {customsRoutes} from './public/pages/services/legal/cases/customs/customs.routes';
+import {commercialRoutes} from './public/pages/services/legal/cases/commercial/commercial.routes';
 
 export const routes: Routes = [
   {
@@ -43,7 +43,7 @@ export const routes: Routes = [
   },
   {
     path: 'services/legal',
-    loadComponent: () => import('./pages/services/legal/legal.component').then(m => m.LegalComponent),
+    loadComponent: () => import('./public/pages/services/legal/legal.component').then(m => m.LegalComponent),
     title: 'Юридичні послуги',
     children: [
       ...familyRoutes,
@@ -68,17 +68,17 @@ export const routes: Routes = [
   },
   {
     path: 'services/valuation',
-    loadComponent: () => import('./pages/services/valuation/valuation.component').then(m => m.ValuationComponent),
+    loadComponent: () => import('./public/pages/services/valuation/valuation.component').then(m => m.ValuationComponent),
     title: 'Оцінка майна'
   },
   {
     path: 'services/seals',
-    loadComponent: () => import('./pages/services/seals/seals.component').then(m => m.SealsComponent),
+    loadComponent: () => import('./public/pages/services/seals/seals.component').then(m => m.SealsComponent),
     title: 'Печатки та штампи'
   },
   {
     path: 'services/grants',
-    loadComponent: () => import('./pages/services/grants/grants.component').then(m => m.GrantsComponent),
+    loadComponent: () => import('./public/pages/services/grants/grants.component').then(m => m.GrantsComponent),
     title: 'Гранти та супровід'
   },
   {
@@ -98,5 +98,9 @@ export const routes: Routes = [
     path: '**',
     component: NotFoundComponent,
     title: 'Сторінку не знайдено'
+  },
+  {
+    path: 'crm',
+    loadChildren: () => import('./crm/crm.routes').then(m => m.CRM_ROUTES)
   }
 ];
