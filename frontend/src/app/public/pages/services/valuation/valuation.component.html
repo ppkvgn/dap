@@ -1,0 +1,20 @@
+<section class="px-4 py-12 max-w-6xl mx-auto grid md:grid-cols-4 gap-6 text-gray-900">
+  <!-- Sidebar -->
+  <aside class="col-span-1">
+    <h2 class="text-xl font-bold mb-4">Напрями оцінки</h2>
+    <ul class="space-y-2">
+      <li><a routerLink="valuation-purpose" routerLinkActive="font-semibold text-blue-700" class="hover:underline block">Мета оцінки</a></li>
+      <li><a routerLink="real-estate" routerLinkActive="font-semibold text-blue-700" class="hover:underline block">Нерухомість</a></li>
+      <li><a routerLink="land" routerLinkActive="font-semibold text-blue-700" class="hover:underline block">Земля</a></li>
+      <li><a routerLink="transport" routerLinkActive="font-semibold text-blue-700" class="hover:underline block">Транспорт</a></li>
+      <li><a routerLink="movable" routerLinkActive="font-semibold text-blue-700" class="hover:underline block">Рухоме майно</a></li>
+      <li><a routerLink="damages" routerLinkActive="font-semibold text-blue-700" class="hover:underline block">Оцінка збитків</a></li>
+      <li><a routerLink="intangible" routerLinkActive="font-semibold text-blue-700" class="hover:underline block">Права та цінні папери</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="col-span-3 min-h-[300px]">
+    <router-outlet></router-outlet>
+  </main>
+</section>
