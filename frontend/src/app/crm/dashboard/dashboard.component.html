@@ -1,1 +1,46 @@
-<p>dashboard.component works!</p>
+<h1 class="text-2xl font-bold mb-6">👋 Вітаємо, Євгенія!</h1>
+
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+  <a
+    routerLink="/crm/cases"
+    class="bg-white shadow rounded-lg p-4 block hover:shadow-md transition"
+  >
+    <h2 class="font-semibold text-gray-800 text-lg mb-2">📂 Мої справи</h2>
+    <p>Активних: 12</p>
+  </a>
+
+  <a
+    routerLink="/crm/cases"
+    class="bg-white shadow rounded-lg p-4 block hover:shadow-md transition"
+  >
+    <h2 class="font-semibold text-gray-800 text-lg mb-2">⏰ Найближчі дедлайни</h2>
+    <ul class="text-sm text-gray-600 space-y-1">
+      <li>🔸 10.07 – Відповідь від суду</li>
+      <li>🔸 12.07 – Акт по справі #42</li>
+    </ul>
+  </a>
+
+  <a
+    routerLink="/crm/documents"
+    class="bg-white shadow rounded-lg p-4 block hover:shadow-md transition"
+  >
+    <h2 class="font-semibold text-gray-800 text-lg mb-2">🧾 Документи</h2>
+    <p>Чернеток: 3<br>Очікують підпису: 2</p>
+  </a>
+
+  <a
+    routerLink="/crm/payments"
+    class="bg-white shadow rounded-lg p-4 block hover:shadow-md transition"
+  >
+    <h2 class="font-semibold text-gray-800 text-lg mb-2">💰 Оплати</h2>
+    <p>Очікується: 4800 грн<br>Отримано: 12 400 грн</p>
+  </a>
+
+  <a
+    routerLink="/crm/reports"
+    class="bg-white shadow rounded-lg p-4 block hover:shadow-md transition"
+  >
+    <h2 class="font-semibold text-gray-800 text-lg mb-2">📈 Статистика</h2>
+    <p>Справ завершено: 5<br>Середній термін: 12 днів</p>
+  </a>
+</div>

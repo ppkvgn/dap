@@ -1,7 +1,16 @@
-<nav class="p-4 space-y-2">
-  <a routerLink="/crm/dashboard" routerLinkActive="font-semibold text-indigo-600" class="block text-gray-700 hover:text-indigo-600">Дашборд</a>
-  <a routerLink="/crm/cases" routerLinkActive="font-semibold text-indigo-600" class="block text-gray-700 hover:text-indigo-600">Справи</a>
-  <a routerLink="/crm/documents" routerLinkActive="font-semibold text-indigo-600" class="block text-gray-700 hover:text-indigo-600">Документи</a>
-  <a routerLink="/crm/finance" routerLinkActive="font-semibold text-indigo-600" class="block text-gray-700 hover:text-indigo-600">Фінанси</a>
-  <a routerLink="/crm/reports" routerLinkActive="font-semibold text-indigo-600" class="block text-gray-700 hover:text-indigo-600">Звіти</a>
+<nav class="h-full flex flex-col space-y-1 text-sm text-gray-700">
+  <ul class="space-y-2">
+    @for (link of navLinks; track link.path) {
+      <li>
+        <a
+          [routerLink]="link.path"
+          routerLinkActive="bg-indigo-100 text-indigo-700 font-semibold"
+          class="flex items-center gap-2 px-3 py-2 rounded hover:bg-indigo-50 transition"
+        >
+          {{ link.icon }}
+          <span>{{ link.label }}</span>
+        </a>
+      </li>
+    }
+  </ul>
 </nav>
