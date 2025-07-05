@@ -10,7 +10,7 @@ export class AuthService {
   constructor(private http: HttpClient) {}
 
   login(email: string, password: string): Observable<{ token: string }> {
-    return this.http.post<{ token: string }>('/api/auth/login', { email, password }).pipe(
+    return this.http.post<{ token: string }>('http://localhost:3000/auth/login', { email, password }).pipe(
       tap(res => localStorage.setItem(this.tokenKey, res.token))
     );
   }

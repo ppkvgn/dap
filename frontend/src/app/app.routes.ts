@@ -95,12 +95,12 @@ export const routes: Routes = [
     }
   },
   {
+    path: 'crm',
+    loadChildren: () => import('./crm/crm.routes').then(m => m.CRM_ROUTES)
+  },
+  {
     path: '**',
     component: NotFoundComponent,
     title: 'Сторінку не знайдено'
   },
-  {
-    path: 'crm',
-    loadChildren: () => import('./crm/crm.routes').then(m => m.CRM_ROUTES)
-  }
 ];
